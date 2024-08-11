@@ -21,13 +21,17 @@ class TodoController extends Controller
     public function update(Request $request, $id)
     {
         $todo = Todo::findOrFail($id);
-        $todo->completed = $request->input('completed');
+        if ($request->has('title')) {
+            $todo->title = $request->input('title');
+            $todo->edited = true;
+        }
+        if ($request->has('completed')) {
+            $todo->completed = $request->input('completed');
+        }
         $todo->save();
-    
-        return response()->json($todo, 200);
-    }    
-    
 
+        return response()->json($todo, 200);
+    }   
     public function destroy($id)
     {
         $todo = Todo::findOrFail($id);
