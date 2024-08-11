@@ -1,66 +1,145 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Todo Uygulaması
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bu, Vue.js, Laravel, MySQL ve TailwindCSS kullanılarak geliştirilmiş basit ve duyarlı bir Todo uygulamasıdır. Uygulama, kullanıcıların görevler eklemesine, düzenlemesine, silmesine ve tamamlandı olarak işaretlemesine olanak tanır. Tasarım tamamen duyarlıdır ve hem masaüstü hem de mobil cihazlarda iyi çalışır.
 
-## About Laravel
+## Özellikler
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Todo ekleme, güncelleme, silme ve tamamlama.
+- Masaüstü ve mobil cihazlar için duyarlı tasarım.
+- Görevlerin satır içi düzenlenmesi.
+- Görev durumu gerçek zamanlı olarak güncellenir.
+- Moment.js kullanılarak tarih formatlama.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Kullanılan Teknolojiler
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Frontend:** Vue.js, TailwindCSS
+- **Backend:** Laravel
+- **Veritabanı:** MySQL
+- **Stil:** TailwindCSS
+- **Tarih Formatlama:** Moment.js
 
-## Learning Laravel
+## Gereksinimler
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Başlamadan önce, aşağıdaki araçların yüklü olduğundan emin olun:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- [Node.js](https://nodejs.org/) (v12 veya üstü)
+- [npm](https://www.npmjs.com/get-npm) veya [Yarn](https://yarnpkg.com/)
+- [Composer](https://getcomposer.org/)
+- [MySQL](https://www.mysql.com/)
+- [PHP](https://www.php.net/) (v8.0 veya üstü)
+- [Laravel](https://laravel.com/)
+- Geliştirme sunucusu için [XAMPP](https://www.apachefriends.org/tr/index.html) veya [MAMP](https://www.mamp.info/en/downloads/)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### XAMPP veya MAMP Kurulumu
 
-## Laravel Sponsors
+- **XAMPP:** [Apache Friends](https://www.apachefriends.org/index.html) sitesinden XAMPP'ı indirip kurun. XAMPP, yerel geliştirme ortamı için gerekli olan Apache ve MySQL sunucularını içerir. Kurulumdan sonra XAMPP Kontrol Paneli üzerinden Apache ve MySQL servislerini başlatın.
+  
+- **MAMP:** [MAMP Resmi Sitesi](https://www.mamp.info/en/downloads/) üzerinden MAMP'ı indirip kurun. MAMP, Mac kullanıcıları için ideal bir geliştirme ortamı sağlar. MAMP'i kurduktan sonra uygulamayı başlatın ve `Start Servers` butonuna tıklayarak Apache ve MySQL sunucularını çalıştırın.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Kurulum
 
-### Premium Partners
+Uygulamayı yerel makinenizde kurmak ve çalıştırmak için aşağıdaki adımları izleyin:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1. Depoyu Klonlayın
 
-## Contributing
+```bash
+git clone https://github.com/veyselsokel/todo-app.git
+cd todo-app
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Backend Bağımlılıklarını Yükleyin
 
-## Code of Conduct
+Laravel bağımlılıklarını yüklemek için Composer'ı kullanın:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+```
 
-## Security Vulnerabilities
+### 3. Frontend Bağımlılıklarını Yükleyin
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Vue.js bağımlılıklarını yüklemek için npm veya Yarn'ı kullanın:
 
-## License
+```bash
+npm install
+# veya
+yarn install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Ortam Değişkenlerini Ayarlayın
+
+`.env.example` dosyasını `.env` olarak kopyalayın ve yerel kurulumunuza uygun ortam değişkenlerini güncelleyin:
+
+```bash
+cp .env.example .env
+```
+
+`.env` dosyasındaki veritabanı bilgilerinizi güncelleyin:
+
+```
+DB_DATABASE=veritabanı_adınız
+DB_USERNAME=veritabanı_kullanıcı_adınız
+DB_PASSWORD=veritabanı_parolanız
+```
+
+### 5. Uygulama Anahtarını Oluşturun
+
+```bash
+php artisan key:generate
+```
+
+### 6. Veritabanı Migrasyonlarını Çalıştırın
+
+Veritabanı tablolarını ayarlamak için aşağıdaki komutu çalıştırın:
+
+```bash
+php artisan migrate
+```
+
+### 7. Frontend Varlıklarını Derleyin
+
+Frontend varlıklarını derlemek için aşağıdaki komutu kullanın:
+
+```bash
+npm run dev
+# prod için
+npm run build
+```
+
+### 8. Uygulamayı Çalıştırın
+
+Laravel geliştirme sunucusunu başlatın:
+
+```bash
+php artisan serve
+```
+
+Uygulamaya erişmek için tarayıcınızda `http://127.0.0.1:8000/` adresine gidin.
+
+## Kullanım
+
+### Todo Ekleme
+
+- Görev adını giriş alanına yazın ve "Ekle" butonuna tıklayın.
+- Görev listeye bir onay kutusu (checkbox), bir "Düzenle" butonu ve bir "Sil" butonu ile birlikte eklenir.
+
+### Todo Düzenleme
+
+- Bir görevi düzenlemek için "Düzenle" butonuna tıklayın.
+- Görev başlığını düzenleyin ve değişiklikleri kaydetmek için "Kaydet" butonuna tıklayın. Kaydetmekten vazgeçerseniz "İptal" butonuna tıklayın.
+
+### Todo Silme
+
+- Bir görevi listeden kaldırmak için "Sil" butonuna tıklayın.
+
+### Todo Tamamlama
+
+- Bir görevi tamamlamak için görevin yanındaki onay kutusuna tıklayın.
+- Görev başlığı üzeri çizili hale gelir ve tamamlandığını gösterir.
+
+## Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakın.
+
+## Katkıda Bulunma
+
+Bu depoyu forklayıp, pull request göndererek katkıda bulunabilirsiniz.
