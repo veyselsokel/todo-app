@@ -23,7 +23,7 @@ class TodoController extends Controller
         $todo = Todo::findOrFail($id);
         if ($request->has('title')) {
             $todo->title = $request->input('title');
-            $todo->edited = true;
+            $todo->increment('edited');
         }
         if ($request->has('completed')) {
             $todo->completed = $request->input('completed');
